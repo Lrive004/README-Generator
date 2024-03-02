@@ -37,10 +37,11 @@ function renderLicenseSection(license) {
       break;
     case 'APACHE 2.0':
       licenseText = `## License
-    This project is licensed uner the APACHE 2.0 License - for more info click here -`
+    This project is licensed under the APACHE 2.0 License - for more info click here -`
+      break;
     case 'GPL 3.0':
       licenseText = `## License
-    This project is licensed uner the GPLv3 License - for more info click here -`
+    This project is licensed under the GPLv3 License - for more info click here -`
     default:
       break;
   };
