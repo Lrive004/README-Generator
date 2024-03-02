@@ -3,6 +3,8 @@
 The following project is a READme generator that provides a clean and precise READme file template for future uses.
 It brings a Table of Contents along with multiple sections to allow for specific commenting.
 
+The following is a link to a walkthrough demo on how to create the READme file:
+https://drive.google.com/file/d/1kzgGFKQZ1qeBGWh20DiBWnjAN3He-6j0/view
 
 <img width="879" alt="image" src="https://github.com/Lrive004/README-Generator/assets/112648247/3fdcd31c-c860-40ad-a1f3-f7dd3975d0da">
 
