@@ -1,5 +1,5 @@
-# Readme challange
-  ## readme generator 
+# Readme challenge
+  ## READme generator 
 
   ## Table of Contents
   - [Installation](#installation)
