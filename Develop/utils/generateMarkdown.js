@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
   if (license === "MIT") {
     return '(https://opensource.org/licenses/MIT)';
   } else if (license === 'APACHE 2.0') {
-    return console.log('(https://opensource.org/licenses/Apache-2.0)');
+    return '(https://opensource.org/licenses/Apache-2.0)';
   } else if (license === 'GPL 3.0') {
     return 'https://www.gnu.org/licenses/agpl-3.0)';
   } else {
@@ -33,21 +33,26 @@ function renderLicenseSection(license) {
   switch (license) {
     case 'MIT':
       licenseText = `## License 
-      This project is licensed under the MIT License - for more info click here - (https://opensource.org/licenses/MIT)`
+    This project is licensed under the MIT License - for more info click here -`
       break;
     case 'APACHE 2.0':
       licenseText = `## License
-      This project is licensed uner the APACHE 2.0 License - for more info click here - (https://opensource.org/licenses/Apache-2.0)`
+    This project is licensed uner the APACHE 2.0 License - for more info click here -`
     case 'GPL 3.0':
       licenseText = `## License
-      This project is licensed uner the GPLv3 License - for more info click here - https://www.gnu.org/licenses/agpl-3.0)`
+    This project is licensed uner the GPLv3 License - for more info click here -`
     default:
       break;
   };
+  return licenseText;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  const licenseBadge = renderLicenseBadge(data.license);
+  const licenseLink = renderLicenseLink(data.license);
+  const licenseSection = renderLicenseSection(data.license);
+
   return `# ${data.title}
   ## ${data.description}
 
@@ -62,8 +67,11 @@ function generateMarkdown(data) {
   ${data.installation}
   ## Usage
   ${data.usage}
-  ## License
+  
   ${data.license}
+  ${licenseBadge}
+  ${licenseSection}
+  ${licenseLink}
   ## Tests
   ${data.tests}
   ## Questions
